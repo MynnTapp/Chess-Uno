@@ -1,0 +1,95 @@
+.chess-board {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 480px;
+  height: 480px;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border: 1px solid rgb(244, 60, 124);
+  background-color: rgb(244, 60, 124);
+}
+
+.game-over-message {
+  color: rgb(31, 236, 215);
+}
+
+.promotion-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+}
+
+.promotion-dialog img {
+  height: 70px;
+  cursor: pointer;
+}
+
+.close-promotion-dialog {
+  font-size: 45px;
+  cursor: pointer;
+  color: rgb(41, 208, 241);
+}
+
+.dark {
+  background-color: #e2bfcc;
+}
+
+.light {
+  background-color: #ea6694;
+}
+
+.piece {
+  width: 50px;
+}
+
+.selected-square {
+  box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.safe-square {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #ec71ad;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.king-in-check {
+  box-shadow: inset rgb(244, 158, 187) 0px 0px 40px 0px,
+    inset rgb(254, 104, 206) 0px 0px 40px 0px,
+    inset rgb(158, 148, 152) 0px 0px 36px -24px;
+}
+
+.last-move {
+  box-shadow: inset rgb(64, 201, 238) 0px 0px 40px 0px,
+    inset rgb(6, 126, 144) 0px 0px 40px 0px,
+    inset rgb(217, 110, 153) 0px 0px 36px -24px;
+}
+
+.promotion-square {
+  box-shadow: inset rgb(8, 188, 170) 0px 0px 40px 0px,
+    inset rgb(218, 77, 138) 0px 0px 40px 0px,
+    inset rgb(65, 134, 229) 0px 0px 36px -24px;
+}

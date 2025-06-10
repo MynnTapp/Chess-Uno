@@ -1,0 +1,10 @@
+<div class="card-container">
+  <button (click)="drawCard()">🎴 Draw UNO Card</button>
+
+  <div *ngIf="drawnCard" class="card-display">
+    <h2>Drawn Card</h2>
+    <strong><p>Color: {{drawnCard.color}}</p></strong>
+    <strong><p>Type: {{drawnCard.type}}</p></strong>
+    <strong><p>Description: {{drawnCard.description}}</p></strong>
+  </div>
+</div>
