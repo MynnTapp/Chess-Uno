@@ -13,14 +13,15 @@ export class ChessBoard {
   private _playerColor = Color.White;
 
   constructor() {
+    // ...existing code...
     this.chessBoard = [
       [
         new Rook(Color.White),
         new Knight(Color.White),
-        new Bishop(Color.White),
-        new Queen(Color.White),
-        new King(Color.White),
-        new Bishop(Color.White),
+        new Bishop(Color.Black),
+        new Queen(Color.White), // <-- Queen before King
+        new King(Color.White), // <-- King after Queen
+        new Bishop(Color.Black),
         new Knight(Color.White),
         new Rook(Color.White),
       ],
@@ -41,27 +42,28 @@ export class ChessBoard {
       [null, null, null, null, null, null, null, null],
 
       [
-        new Rook(Color.Black),
-        new Knight(Color.Black),
-        new Bishop(Color.Black),
-        new Queen(Color.Black),
-        new King(Color.Black),
-        new Bishop(Color.Black),
-        new Knight(Color.Black),
-        new Rook(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
+        new Pawn(Color.Black),
       ],
 
       [
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
-        new Pawn(Color.Black),
+        new Rook(Color.Black),
+        new Knight(Color.Black),
+        new Bishop(Color.White),
+        new Queen(Color.Black), // <-- Queen before King
+        new King(Color.Black), // <-- King after Queen
+        new Bishop(Color.White),
+        new Knight(Color.Black),
+        new Rook(Color.Black),
       ],
     ];
+    // ...existing code...
   }
 
   public get playerColor(): Color {
